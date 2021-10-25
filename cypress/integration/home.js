@@ -13,7 +13,7 @@ describe('My First Test', () => {
       // Help! This worked before, but then the page changed, and now it's failing!
       cy.get('html body div div button').click()
   
-      cy.get('h5').first().should('contain', 'Tomato Soup')
+      cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
   
     it('Can have a timing issue', () => {

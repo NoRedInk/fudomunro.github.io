@@ -7,7 +7,7 @@ describe('My First Test', () => {
       cy.title().should('eq', 'QA Web Automation Activity')
     })
   
-    it('Check a menu item', () => {
+    it('Can view a menu item', () => {
       cy.visit('/home.html')
   
       // Help! This worked before, but then the page changed, and now it's failing!

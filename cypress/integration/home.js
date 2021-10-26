@@ -8,8 +8,7 @@ describe('My First Test', () => {
     it('Can view a menu item', () => {
       cy.visit('/home.html')
   
-      // Help! This worked before, but then the page changed, and now it's failing!
-      cy.get('html body div div button').click()
+      cy.get('div[data-nri-id=menu_button]').click()
   
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })

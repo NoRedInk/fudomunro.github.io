@@ -1,6 +1,6 @@
 {
     "projectId": "n/a",
-    "baseUrl": "https://fudomunro.github.io",
+    "baseUrl": "https://noredink.github.io/qa-fake-restaurant",
     "chromeWebSecurity": false,
     "defaultCommandTimeout":10000,
     "watchForFileChanges": false,

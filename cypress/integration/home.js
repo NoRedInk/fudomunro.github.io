@@ -1,12 +1,12 @@
 describe('My First Test', () => {
 
     it('Can load the page', () => {
-      cy.visit('/test.html')
+      cy.visit('/home.html')
       cy.title().should('eq', 'QA Web Automation Activity')
     })
   
     it('Can view a menu item', () => {
-      cy.visit('/test.html')
+      cy.visit('/home.html')
   
       // Help! This worked before, but then the page changed, and now it's failing!
       cy.get('html body div div button').click()
@@ -15,7 +15,7 @@ describe('My First Test', () => {
     })
   
     it('Can enter contact details', () => {
-      cy.visit('/test.html')
+      cy.visit('/home.html')
   
       cy.contains('div', 'show contact').click()
       cy.contains('contact').should('be.visible')
@@ -29,7 +29,7 @@ describe('My First Test', () => {
     })
   
     it('Can toggle the contact form', () => {
-      cy.visit('/test.html')
+      cy.visit('/home.html')
   
       cy.contains('div', 'show contact').click()
       cy.contains('Reserve a table').should('be.visible')

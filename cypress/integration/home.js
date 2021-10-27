@@ -2,7 +2,7 @@ describe('On the home page', () => {
 
     it('Can load the page', () => {
       cy.visit('/')
-      cy.title().should('eq', 'QA Web Automation Activity')
+      cy.title().should('eq', 'Our Fake Restaurant')
     })
   
     it('Can view a menu item', () => {

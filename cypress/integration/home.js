@@ -34,7 +34,7 @@ describe('On the home page', () => {
       cy.contains('div', 'show contact').click()
       cy.contains('Reserve a table').should('be.visible')
   
-      cy.contains('span', 'x').click()
+      cy.get('div[data-nri-id="contact"]').contains("span", "x").click()
       cy.contains('Reserve a table').should('not.be.visible')
     })
   })

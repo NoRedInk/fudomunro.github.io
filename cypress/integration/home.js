@@ -1,4 +1,4 @@
-describe('My First Test', () => {
+describe('On the home page', () => {
 
     it('Can load the page', () => {
       cy.visit('/test.html')

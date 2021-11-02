@@ -7,7 +7,7 @@ describe('On the home page', () => {
   
     it('Can view a menu item', () => {
       cy.visit('/')
-      cy.get('#menu_button').click()
+      cy.get('div:contains("open menu")').click()
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
   

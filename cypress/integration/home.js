@@ -24,10 +24,14 @@ describe('On the home page', () => {
     it('Can toggle the contact form', () => {
       cy.visit('')
   
+      cy.log('clicking show contact')
       cy.contains('div', 'show contact').click()
+      cy.log('checking reserve table')
       cy.contains('Reserve a table').should('be.visible')
   
+      cy.log('clicking hide contact')
       cy.contains('div', 'hide contact').click()
+      cy.log('checking reserve table')
       cy.contains('Reserve a table').should('not.be.visible')
     })
   })

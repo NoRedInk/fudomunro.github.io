@@ -14,7 +14,8 @@ describe('On the home page', () => {
     })
   
     it('Can enter contact details', () => {  
-      cy.get("#button_container > div:nth-child(2)").click()
+//       cy.get("#button_container > div:nth-child(2)").click()
+      cy.xpath("#button_container > div:nth-child(2)")
 //       cy.contains('div', 'show contact').click()
       cy.contains('contact').should('be.visible')
  

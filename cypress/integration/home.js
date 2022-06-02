@@ -1,8 +1,8 @@
 describe('On the home page', () => {
 
     it('Can load the page', () => {
-      cy.visit('/test.html')
-      cy.title().should('eq', 'QA Web Automation Activity')
+      cy.visit('/qa-fake-restaurant/')
+      cy.title().should('eq', 'Our Fake Restaurant')
     })
   
     it('Can view a menu item', () => {

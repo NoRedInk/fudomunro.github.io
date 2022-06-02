@@ -6,10 +6,9 @@ describe('On the home page', () => {
     })
   
     it('Can view a menu item', () => {
-      cy.visit('/')
   
       // Help! This worked before, but then the page changed, and now it's failing!
-      cy.get('html body div div div button').click()
+      cy.get('//*[@id="button_container"]/div[1]').click()
   
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })

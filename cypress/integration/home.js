@@ -13,10 +13,9 @@ describe('On the home page', () => {
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
   
-    it('Can enter contact details', () => {
-      cy.visit('/test.html')
-  
-      cy.contains('div', 'show contact').click()
+    it('Can enter contact details', () => {  
+      cy.get('#button_container > div:nth-child(2)').click()
+      //cy.contains('div', 'show contact').click()
       cy.contains('contact').should('be.visible')
  
   

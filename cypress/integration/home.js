@@ -22,10 +22,10 @@ describe('On the home page', () => {
     })
   
     it('Can toggle the contact form', () => {
-      cy.visit('/test.html')
   
-      cy.contains('div', 'show contact').click()
+      cy.contains('div', 'show contact').click({force: true})
       cy.contains('Reserve a table').should('be.visible')
+      cy.get('#_541jkl_modal > div > div.w3-container.w3-black > span').click()
   
       cy.contains('div', 'hide contact').click()
       cy.contains('Reserve a table').should('not.be.visible')

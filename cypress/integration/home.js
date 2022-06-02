@@ -1,7 +1,7 @@
 describe('On the home page', () => {
 
     it('Can load the page', () => {
-      cy.visit()
+      cy.visit('/')
       cy.title().should('eq', 'Our Fake Restaurant')
     })
   

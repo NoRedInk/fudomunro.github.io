@@ -27,7 +27,7 @@ describe('On the home page', () => {
       cy.contains('Reserve a table').should('be.visible')
       cy.get('#_541jkl_modal > div > div.w3-container.w3-black > span').click()
   
-      cy.contains('div', 'hide contact').click()
+      cy.contains('div', 'hide contact').click({force: true})
       cy.contains('Reserve a table').should('not.be.visible')
     })
   })

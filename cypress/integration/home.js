@@ -14,12 +14,10 @@ describe('On the home page', () => {
     })
   
     it('Can enter contact details', () => {  
-//       cy.get("#button_container > div:nth-child(2)").click()
-      cy.xpath("#button_container > div:nth-child(2)")
 //       cy.contains('div', 'show contact').click()
-      cy.contains('contact').should('be.visible')
- 
-  
+//       cy.contains('contact').should('be.visible')
+      cy.contains('show contact').click()
+       
       // the 'name' field is focused by default, so we can type into it right away
       cy.focused().type('John Smith')
     })

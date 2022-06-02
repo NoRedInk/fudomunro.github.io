@@ -14,9 +14,8 @@ describe('On the home page', () => {
     })
   
     it('Can enter contact details', () => {  
-//       cy.contains('div', 'show contact').click()
-//       cy.contains('contact').should('be.visible')
-      cy.contains('show contact').click()
+
+      cy.contains('show contact').click({force: true})
        
       // the 'name' field is focused by default, so we can type into it right away
       cy.focused().type('John Smith')

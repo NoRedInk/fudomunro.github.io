@@ -6,7 +6,7 @@ describe('On the home page', () => {
     })
   
     it('Can view a menu item', () => {
-      cy.visit('/test.html')
+      cy.visit('/')
   
       // Help! This worked before, but then the page changed, and now it's failing!
       cy.get('html body div div button').click()

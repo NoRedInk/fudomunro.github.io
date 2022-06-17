@@ -2,14 +2,14 @@ describe('On the home page', () => {
 
     it('Can load the page', () => {
       cy.visit('/')
-      cy.title().should('eq', 'QA Web Automation Activity')
+      cy.title().should('eq', 'Our Fake Restaurant')
     })
   
     it('Can view a menu item', () => {
       cy.visit('/')
   
       // Help! This worked before, but then the page changed, and now it's failing!
-      cy.get('html body div div button').click()
+      //cy.get('html body div div button').click()
   
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })

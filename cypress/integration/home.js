@@ -10,7 +10,7 @@ describe('On the home page', () => {
   
       // Help! This worked before, but then the page changed, and now it's failing!
       //cy.get('html body div div button').click()
-  
+      cy.get('.w3-button .w3-black').first().click()
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
   

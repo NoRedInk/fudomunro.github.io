@@ -9,7 +9,7 @@ describe('On the home page', () => {
       cy.visit('/https://noredink.github.io/qa-fake-restaurant/')
   
       // Help! This worked before, but then the page changed, and now it's failing!
-      cy.get(XPATH, "//div[@id='_543jkl_block']").click()
+      cy.get('div#_543jkl_block').click()
   
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
@@ -20,7 +20,7 @@ describe('On the home page', () => {
       cy.contains('div', 'show contact').click()
       cy.contains('contact').should('be.visible')
   
-      cy.get(XPATH, "//*[@placeholder="Name"]')
+      cy.get('[placeholder=Name]')
   
       // the 'name' field is focused by default, so we can type into it right away
       cy.focused().type('John Smith')

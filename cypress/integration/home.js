@@ -34,7 +34,7 @@ describe('On the home page', () => {
       cy.contains('div', 'show contact').click()
       cy.contains('Reserve a table').should('be.visible')
   
-      cy.contains('span[class*=ansifg-y text-bold text-underline]').click()
+      cy.contains('onclick.w3-button.w3-display-topright.w3-large').click()
       cy.contains('Reserve a table').should('not.be.visible')
     })
   })

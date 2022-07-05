@@ -11,7 +11,9 @@ describe('On the home page', () => {
       // Help! This worked before, but then the page changed, and now it's failing!
       cy.get('div#_543jkl_block').click()
   
-      cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
+      cy.contains('Tomato Soup').should('be.visible')
+ 
+ 
     })
   
     it('Can enter contact details', () => {

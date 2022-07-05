@@ -1,35 +1,33 @@
 describe('On the home page', () => {
 
     it('Can load the page', () => {
-      cy.visit('/test.html')
-      cy.title().should('eq', 'QA Web Automation Activity')
+      cy.visit('/https://noredink.github.io/qa-fake-restaurant/')
+      cy.title().should('eq', 'Our Fake Restaurant')
     })
   
     it('Can view a menu item', () => {
-      cy.visit('/test.html')
+      cy.visit('/https://noredink.github.io/qa-fake-restaurant/')
   
       // Help! This worked before, but then the page changed, and now it's failing!
-      cy.get('html body div div button').click()
+      cy.get(XPATH, "//div[@id='_543jkl_block']").click()
   
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
   
     it('Can enter contact details', () => {
-      cy.visit('/test.html')
+      cy.visit('/https://noredink.github.io/qa-fake-restaurant/')
   
       cy.contains('div', 'show contact').click()
       cy.contains('contact').should('be.visible')
   
-      cy.get('#_541jkl_modal h1').then((heading) => {
-        cy.log(heading.text())
-      })
+      cy.get(XPATH, "//*[@placeholder="Name"]')
   
       // the 'name' field is focused by default, so we can type into it right away
       cy.focused().type('John Smith')
     })
   
     it('Can toggle the contact form', () => {
-      cy.visit('/test.html')
+      cy.visit('/https://noredink.github.io/qa-fake-restaurant/')
   
       cy.contains('div', 'show contact').click()
       cy.contains('Reserve a table').should('be.visible')

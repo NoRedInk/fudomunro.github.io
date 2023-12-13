@@ -1,12 +1,21 @@
-describe('My First Test', () => {
+describe('On the home page', () => {
 
     it('Can load the page', () => {
-      cy.visit('/test.html')
-      cy.title().should('eq', 'QA Web Automation Activity')
+      cy.visit('/')
+      cy.title().should('eq', 'Our Fake Restaurant')
+    })
+  
+    it('Can view a menu item', () => {
+      cy.visit('/')
+  
+      // Help! This worked before, but then the page changed, and now it's failing!
+      cy.contains('open menu').click()
+  
+      cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
   
     it('Can enter contact details', () => {
-      cy.visit('/test.html')
+      cy.visit('/')
   
       cy.contains('div', 'show contact').click()
       cy.contains('contact').should('be.visible')
@@ -17,5 +26,15 @@ describe('My First Test', () => {
   
       // the 'name' field is focused by default, so we can type into it right away
       cy.focused().type('John Smith')
+    })
+  
+    it('Can toggle the contact form', () => {
+      cy.visit('/')
+  
+      cy.contains('div', 'show contact').click()
+      cy.contains('Reserve a table').should('be.visible')
+  
+      cy.get("div[data-nri-id='contact'] .w3-button").first().click()
+      cy.contains('Reserve a table').should('not.be.visible')
     })
   })

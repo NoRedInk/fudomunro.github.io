@@ -9,7 +9,7 @@ describe('On the home page', () => {
       cy.visit('/')
   
       // Help! This worked before, but then the page changed, and now it's failing!
-      cy.get('html body div div button').click()
+      cy.contains('open menu').click()
   
       cy.get('h5').first().should('be.visible').should('contain', 'Tomato Soup')
     })
